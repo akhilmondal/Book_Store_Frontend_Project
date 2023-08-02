@@ -1,0 +1,151 @@
+<div class="container">
+  <div class="login-container">
+    <div>
+      <mat-card class="container-left">
+        <div>
+          <img src="/assets/Login_page_cart.png" alt="" />
+        </div>
+        <div>
+          <h1>Online Book Shoping</h1>
+        </div>
+      </mat-card>
+    </div>
+    <div>
+      <mat-card class="card-container">
+        <div>
+          <mat-tab-group>
+            <mat-tab label="Login">
+              <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+                <div class="input">
+                  <div>
+                    <p>
+                      <mat-form-field class="input" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input
+                          matInput
+                          placeholder="Email"
+                          formControlName="email"
+                        />
+                        <mat-error>Email required</mat-error>
+                      </mat-form-field>
+                    </p>
+                  </div>
+                  <div>
+                    <p>
+                      <mat-form-field class="input" appearance="outline">
+                        <mat-label>PassWord</mat-label>
+                        <input
+                          matInput
+                          placeholder="Password"
+                          formControlName="password"
+                        />
+                        <mat-error>Password required</mat-error>
+                      </mat-form-field>
+                    </p>
+                  </div>
+                  <div style="padding-left: 38px">
+                    <button
+                      mat-button
+                      class="login-button"
+                      type="submit"
+                    >
+                      Login
+                    </button>
+                  </div>
+                  <div>
+                    <h1 class="center">OR</h1>
+                  </div>
+                  <div class="social-buttons">
+                    <div>
+                      <button mat-raised-button color="primary" class="button">
+                        Facebook
+                      </button>
+                    </div>
+                    <div>
+                      <button mat-raised-button class="button">Google</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </mat-tab>
+            <mat-tab label="Sign Up">
+              <form [formGroup]="registerForm" (ngSubmit)="onSubmitRegister()">
+                <div class="signup-tab">
+                  <div>
+                    <p>
+                      <mat-form-field
+                        class="register-input"
+                        appearance="outline"
+                      >
+                        <mat-label>Full Name</mat-label>
+                        <input
+                          matInput
+                          placeholder="Full Name"
+                          formControlName="fullName"
+                        />
+                        <mat-error>Name required</mat-error>
+                      </mat-form-field>
+                    </p>
+                  </div>
+                  <div>
+                    <p>
+                      <mat-form-field
+                        class="register-input"
+                        appearance="outline"
+                      >
+                        <mat-label>Email</mat-label>
+                        <input
+                          matInput
+                          placeholder="Email"
+                          formControlName="emailId"
+                        />
+                        <mat-error>Email required</mat-error>
+                      </mat-form-field>
+                    </p>
+                  </div>
+                  <div>
+                    <p>
+                      <mat-form-field
+                        class="register-input"
+                        appearance="outline"
+                      >
+                        <mat-label>PassWord</mat-label>
+                        <input
+                          matInput
+                          placeholder="Password"
+                          formControlName="registerPassword"
+                        />
+                        <mat-error>Password required</mat-error>
+                      </mat-form-field>
+                    </p>
+                  </div>
+                  <div>
+                    <p>
+                      <mat-form-field
+                        class="register-input"
+                        appearance="outline"
+                      >
+                        <mat-label>Mobile Number</mat-label>
+                        <input
+                          matInput
+                          placeholder="Mobile Number"
+                          formControlName="phone"
+                        />
+                        <mat-error>Number required</mat-error>
+                      </mat-form-field>
+                    </p>
+                  </div>
+                  <div style="padding-left: 38px">
+                    <button mat-raised-button color="warn" class="login-button">
+                      Sign Up
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>
