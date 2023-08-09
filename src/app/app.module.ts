@@ -22,9 +22,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import {MatDividerModule} from '@angular/material/divider';
+import { GetallbooksComponent } from './Components/getallbooks/getallbooks.component';
+import { DisplaybooksComponent } from './Components/displaybooks/displaybooks.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, DashboardComponent],
+  declarations: [AppComponent, LoginComponent, DashboardComponent, GetallbooksComponent, DisplaybooksComponent],
   imports: [
     BrowserModule,
 
@@ -40,6 +43,9 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

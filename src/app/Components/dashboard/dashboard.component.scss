@@ -1,0 +1,46 @@
+mat-toolbar {
+  background-color: #a03037;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.right-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 400px;
+  padding-top: 20px;
+}
+mat-divider {
+  height: 100px;
+  width: 1px;
+  background-color: #ccc;
+}
+.logo-text {
+  color: aliceblue;
+}
+
+.search {
+  margin-top: 0%;
+  margin-left: 500px;
+  height: 40px;
+  width: 500px;
+  border: black;
+  border-radius: 5px;
+}
+
+.white-background .mat-input-element {
+  background-color: aliceblue;
+}
+.right-icon {
+  height: 60px;
+  width: 70px;
+}
