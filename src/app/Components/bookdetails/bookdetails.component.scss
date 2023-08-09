@@ -1,0 +1,69 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 160px;
+}
+.bookImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 10px;
+}
+.book-img-size {
+    width: 350px;
+    height: 400px;
+}
+
+//button designs
+.addButton {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+}
+.cart-button {
+  background-color: #a03037;
+  color: #e4e4e4;
+}
+.wishlist-button {
+  background-color: #373434;
+  color: #e4e4e4;
+}
+button {
+  width: 200px;
+  margin-left: 5px;
+}
+
+.flex-row-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.book-price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.book-head {
+    margin-left: 25px;
+}
+
+.right-container {
+    padding: 10px;
+}
+h1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 30px;
+}
+.customer-feedback {
+    margin-top: 5px;
+    margin-left: 40px;
+}
+.rating-image {
+    width: 2px;
+    height: 2px;
+}

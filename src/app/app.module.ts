@@ -25,9 +25,10 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import {MatDividerModule} from '@angular/material/divider';
 import { GetallbooksComponent } from './Components/getallbooks/getallbooks.component';
 import { DisplaybooksComponent } from './Components/displaybooks/displaybooks.component';
+import { BookdetailsComponent } from './Components/bookdetails/bookdetails.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, DashboardComponent, GetallbooksComponent, DisplaybooksComponent],
+  declarations: [AppComponent, LoginComponent, DashboardComponent, GetallbooksComponent, DisplaybooksComponent, BookdetailsComponent],
   imports: [
     BrowserModule,
 

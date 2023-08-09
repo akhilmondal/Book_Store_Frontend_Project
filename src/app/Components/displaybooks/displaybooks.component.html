@@ -15,7 +15,7 @@
 </div>
 <div class="book-container">
   <div *ngFor="let book of books">
-    <mat-card>
+    <mat-card (click)="goToBookDetails(book._id)">
       <div style="padding-top: 50px">
         <img
           src="http://books.google.com/books/publisher/content?id=FRboAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE721e9hHHSYxAzMYdYLRJGxmJonID57PV2E7v5Mfjd_sw1T4RTm-R0VEWk4iV1Dm3zBx2FZxH9StzNqGsxcdw8Ra6QYt8x0J9lAD5wptSJABBVwjeDXWmiofYsRWgGT2Rqf-WSty&source=gbs_api"
@@ -34,7 +34,7 @@
           <p style="background-color: #388e3c; color: aliceblue">*</p>
           <p>(20)</p>
         </div>
-        <div class="">
+        <div class="book-price">
           <h4>
             <b>Rs. {{ book.price }}</b>
           </h4>
@@ -42,5 +42,6 @@
         </div>
       </div>
     </mat-card>
+
   </div>
 </div>

@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="left-container">
+    <div class="bookImage">
+      <img class="book-img-size"
+        src="/assets/book_cover.jpg"
+        alt=""
+      />
+    </div>
+    <div class="addButton">
+      <button mat-button class="cart-button">ADD TO BAG</button>
+      <button mat-button class="wishlist-button">ADD TO WISHLIST</button>
+    </div>
+  </div>
+  <div class="righ-container">
+    <div class="book-head">
+      <div>
+        <h1>{{ book_details.bookName }}</h1>
+        <p style="color: #999">by {{ book_details.author }}</p>
+      </div>
+      <div class="flex-row-right">
+        <div style="display: flex; flex-direction: row">
+          <p style="background-color: #388e3c; width: 30px; color: aliceblue">
+            4.5
+          </p>
+          <p style="background-color: #388e3c; color: aliceblue">*</p>
+        </div>
+        <div>
+          <p>(20)</p>
+        </div>
+      </div>
+      <div class="book-price">
+        <h4>
+          <h2>
+            <b>Rs. {{ book_details.price }}</b>
+          </h2>
+        </h4>
+        <h4 style="text-decoration: line-through; color: #999">Rs. 1000</h4>
+      </div>
+      <mat-divider></mat-divider>
+    </div>
+
+    <div>
+      <ul>
+        <li>
+          <h3 style="color: #999">Book Detail</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt<br />
+            ut labore et dolore magna aliquyam erat, sed diam voluptua.<br />
+            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+            amet.<br />
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut
+          </p>
+        </li>
+      </ul>
+      <mat-divider style="margin-left: 25px"></mat-divider>
+    </div>
+    <div class="customer-feedback">
+      <h4>Customer Feedback</h4>
+      <div>
+        <p style="margin-left: 10px;">Overall Rating</p>
+        <div>
+          <img src="/assets/star_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+          <img src="/assets/star_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+          <img src="/assets/star_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+          <img src="/assets/star_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+          <img src="/assets/star_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
