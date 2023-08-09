@@ -1,13 +1,12 @@
 <div class="container">
   <div class="left-container">
     <div class="bookImage">
-      <img class="book-img-size"
-        src="/assets/book_cover.jpg"
-        alt=""
-      />
+      <img class="book-img-size" src="/assets/book_cover.jpg" alt="" />
     </div>
     <div class="addButton">
-      <button mat-button class="cart-button">ADD TO BAG</button>
+      <button mat-button class="cart-button" (click)="addToCart()">
+        ADD TO BAG
+      </button>
       <button mat-button class="wishlist-button">ADD TO WISHLIST</button>
     </div>
   </div>
@@ -60,7 +59,7 @@
     <div class="customer-feedback">
       <h4>Customer Feedback</h4>
       <div>
-        <p style="margin-left: 10px;">Overall Rating</p>
+        <p style="margin-left: 10px">Overall Rating</p>
         <div>
           <img src="/assets/star_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
           <img src="/assets/star_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
