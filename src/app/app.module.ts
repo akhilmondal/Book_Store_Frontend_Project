@@ -46,7 +46,8 @@ import { BookdetailsComponent } from './Components/bookdetails/bookdetails.compo
     ReactiveFormsModule,
     MatToolbarModule,
     MatIconModule,
-    MatDividerModule
+    MatDividerModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],
