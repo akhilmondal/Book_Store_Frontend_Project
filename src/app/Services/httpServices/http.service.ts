@@ -20,4 +20,7 @@ export class HttpService {
       token && httpOptions
     );
   }
+  getService(url: string, token: boolean = false, httpOptions: any) {
+    return this.httpClient.get(this.baseurl + url, token && httpOptions);
+  }
 }
