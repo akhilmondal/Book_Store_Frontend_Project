@@ -12,8 +12,8 @@
   padding: 10px;
 }
 .book-img-size {
-    width: 350px;
-    height: 400px;
+  width: 350px;
+  height: 400px;
 }
 
 //button designs
@@ -26,10 +26,18 @@
 .cart-button {
   background-color: #a03037;
   color: #e4e4e4;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 16px;
 }
 .wishlist-button {
   background-color: #373434;
   color: #e4e4e4;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 16px;
 }
 button {
   width: 200px;
@@ -47,23 +55,23 @@ button {
   align-items: center;
 }
 .book-head {
-    margin-left: 25px;
+  margin-left: 25px;
 }
 
 .right-container {
-    padding: 10px;
+  padding: 10px;
 }
 h1 {
-    font-size: 50px;
+  font-size: 50px;
 }
 h2 {
-    font-size: 30px;
+  font-size: 30px;
 }
 .customer-feedback {
-    margin-top: 5px;
-    margin-left: 40px;
+  margin-top: 5px;
+  margin-left: 40px;
 }
 .rating-image {
-    width: 2px;
-    height: 2px;
+  width: 2px;
+  height: 2px;
 }
