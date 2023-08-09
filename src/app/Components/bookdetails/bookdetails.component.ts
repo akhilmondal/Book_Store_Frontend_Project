@@ -32,6 +32,7 @@ export class BookdetailsComponent {
     });
   }
 
+  //method to hit api for add book to cart
   addToCart() {
     let payload = {
       book_id: this.book_details._id,
@@ -41,5 +42,13 @@ export class BookdetailsComponent {
     });
   }
 
-  addToWishList() {}
+  //method to hit api for add book to wishlist
+  addToWishList() {
+    let payload = {
+      book_id: this.book_details._id,
+    };
+    this.carts.addBookToWishList(payload).subscribe((response: any) => {
+      console.log(response);
+    });
+  }
 }

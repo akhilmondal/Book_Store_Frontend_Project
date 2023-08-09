@@ -11,6 +11,7 @@ export class CartService {
     this.token = localStorage.getItem('token');
   }
 
+  //Service for add book to the cart
   addBookToCart(reqdata: any) {
     let header = {
       headers: new HttpHeaders({
@@ -20,6 +21,22 @@ export class CartService {
     };
     return this.httpservice.postService(
       `carts/${reqdata.book_id}`,
+      reqdata,
+      true,
+      header
+    );
+  }
+
+  //Service for add book to the wishlist
+  addBookToWishList(reqdata: any) {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        Authorization: 'bearer ' + this.token,
+      }),
+    };
+    return this.httpservice.postService(
+      `wishlist/${reqdata.book_id}`,
       reqdata,
       true,
       header
