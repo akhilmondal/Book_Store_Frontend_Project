@@ -38,6 +38,22 @@ export class CartService {
     );
   }
 
+  //remove book from cart
+  removeBookFromCart(reqdata: any) {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        Authorization: 'bearer ' + this.token,
+      }),
+    };
+    return this.httpservice.putService(
+      `carts/${reqdata.book_id}`,
+      reqdata,
+      true,
+      header
+    );
+  }
+
   //Service for add book to the wishlist
   addBookToWishList(reqdata: any) {
     let header = {
