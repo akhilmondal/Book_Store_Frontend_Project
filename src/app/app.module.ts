@@ -30,6 +30,7 @@ import { DisplaybooksComponent } from './Components/displaybooks/displaybooks.co
 import { BookdetailsComponent } from './Components/bookdetails/bookdetails.component';
 import { CartComponent } from './Components/cart/cart.component';
 import { OrderplacedComponent } from './Components/orderplaced/orderplaced.component';
+import { SearchBookPipe } from './Pipe/filterBooks/search-book.pipe';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { OrderplacedComponent } from './Components/orderplaced/orderplaced.compo
     BookdetailsComponent,
     CartComponent,
     OrderplacedComponent,
+    SearchBookPipe,
   ],
   imports: [
     BrowserModule,

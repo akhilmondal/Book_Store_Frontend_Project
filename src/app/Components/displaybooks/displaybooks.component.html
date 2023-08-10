@@ -15,7 +15,7 @@
   </div>
 </div>
 <div class="book-container">
-  <div *ngFor="let book of books">
+  <div *ngFor="let book of books | searchBook : searchMessage">
     <mat-card (click)="goToBookDetails(book._id)">
       <div style="padding-top: 50px">
         <img
