@@ -43,7 +43,7 @@
                 <img
                   class="cart-operation-img"
                   src="/assets/add_to_cart.png"
-                  alt=""
+                  (click)="addToCart(book.bookId)"
                 />
               </div>
               <div>
@@ -102,12 +102,10 @@
               <div>
                 <p>Address</p>
                 <mat-form-field class="example-full-width">
-                  <mat-label
-                    >BridgeLabz Solutions LLP, No. 42, 14th Main, <br />15th
-                    Cross, Sector 4, Opp to BDA complex, <br />near Kumarakom
-                    restaurant, HSR Layout, Bangalore</mat-label
-                  >
-                  <textarea matInput placeholder="Ex. "></textarea>
+                  <textarea
+                    matInput
+                    placeholder="Ex. BridgeLabz Solutions LLP, No. 42, 14th Main,15th Cross, Sector 4, Opp to BDA complex,near Kumarakom restaurant, HSR Layout, Bangalore "
+                  ></textarea>
                 </mat-form-field>
               </div>
               <div class="div-row-right">

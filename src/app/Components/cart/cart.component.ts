@@ -12,14 +12,31 @@ export class CartComponent {
   panelOpenState = false;
   panelOpenState2 = false;
 
-
-  constructor(private cart: CartService) {}
+  constructor(private carts: CartService) {}
 
   ngOnInit() {
-    this.cart.getCart().subscribe((response: any) => {
+    this.carts.getCart().subscribe((response: any) => {
       this.books = response.data.books;
       console.log(this.books);
       this.itemNumber = this.books.length;
     });
+  }
+
+  addToCart(bookId: any) {
+    let payload = {
+      book_id: bookId,
+    };
+    this.carts.addBookToCart(payload).subscribe((response: any) => {
+      console.log(response);
+    });
+  }
+  removeFromCart(bookId: any) {
+    let payload = {
+      book_id: bookId,
+    };
+    // this.carts.(payload).subscribe((response: any) => {
+    //   console.log(response);
+    // });
+
   }
 }
