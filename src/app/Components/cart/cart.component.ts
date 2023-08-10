@@ -11,11 +11,13 @@ export class CartComponent {
   itemNumber!: number;
   panelOpenState = false;
   panelOpenState2 = false;
+  cartId: any;
 
   constructor(private carts: CartService) {}
 
   ngOnInit() {
     this.carts.getCart().subscribe((response: any) => {
+      this.cartId = response.data._id;
       this.books = response.data.books;
       console.log(this.books);
       this.itemNumber = this.books.length;
@@ -29,6 +31,7 @@ export class CartComponent {
     this.carts.addBookToCart(payload).subscribe((response: any) => {
       console.log(response);
     });
+    this.ngOnInit();
   }
 
   //remove from cart
@@ -37,6 +40,16 @@ export class CartComponent {
       book_id: bookId,
     };
     this.carts.removeBookFromCart(payload).subscribe((response: any) => {
+      console.log(response);
+    });
+    this.ngOnInit();
+  }
+
+  isPurchase() {
+    let payload = {
+      cart_id: this.cartId,
+    };
+    this.carts.isPurchase(payload).subscribe((response: any) => {
       console.log(response);
     });
   }
