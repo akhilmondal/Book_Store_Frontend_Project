@@ -11,13 +11,15 @@
       </div>
     </div>
     <div>
-      <input class="search" placeholder="Search" />
+      <input
+        class="search"
+        placeholder="Search"
+        (keyup)="onSearchInputChange($event)"
+      />
     </div>
     <div class="right-container">
       <div>
-        <mat-icon class="right-icon"
-          >person
-        </mat-icon>
+        <mat-icon class="right-icon">person </mat-icon>
       </div>
       <div>
         <mat-icon class="right-icon" routerLink="/dashboard/cart"
