@@ -1,0 +1,29 @@
+::ng-deep .mat-raised-button {
+    background-color: aqua;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+td,
+th {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.border {
+  border: 1px solid #dcdcdc;
+}
+.shopping-button {
+  margin-top: 30px;
+}
+

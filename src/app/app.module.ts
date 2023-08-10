@@ -29,6 +29,7 @@ import { GetallbooksComponent } from './Components/getallbooks/getallbooks.compo
 import { DisplaybooksComponent } from './Components/displaybooks/displaybooks.component';
 import { BookdetailsComponent } from './Components/bookdetails/bookdetails.component';
 import { CartComponent } from './Components/cart/cart.component';
+import { OrderplacedComponent } from './Components/orderplaced/orderplaced.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { CartComponent } from './Components/cart/cart.component';
     DisplaybooksComponent,
     BookdetailsComponent,
     CartComponent,
+    OrderplacedComponent,
   ],
   imports: [
     BrowserModule,
