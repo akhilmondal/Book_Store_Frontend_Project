@@ -14,6 +14,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatRadioModule } from '@angular/material/radio';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,13 +24,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider';
 import { GetallbooksComponent } from './Components/getallbooks/getallbooks.component';
 import { DisplaybooksComponent } from './Components/displaybooks/displaybooks.component';
 import { BookdetailsComponent } from './Components/bookdetails/bookdetails.component';
+import { CartComponent } from './Components/cart/cart.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, DashboardComponent, GetallbooksComponent, DisplaybooksComponent, BookdetailsComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    DashboardComponent,
+    GetallbooksComponent,
+    DisplaybooksComponent,
+    BookdetailsComponent,
+    CartComponent,
+  ],
   imports: [
     BrowserModule,
 
@@ -47,7 +58,9 @@ import { BookdetailsComponent } from './Components/bookdetails/bookdetails.compo
     MatToolbarModule,
     MatIconModule,
     MatDividerModule,
-    MatButtonModule
+    MatButtonModule,
+    MatExpansionModule,
+    MatRadioModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
