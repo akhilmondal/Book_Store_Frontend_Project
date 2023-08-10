@@ -30,13 +30,14 @@ export class CartComponent {
       console.log(response);
     });
   }
+
+  //remove from cart
   removeFromCart(bookId: any) {
     let payload = {
       book_id: bookId,
     };
-    // this.carts.(payload).subscribe((response: any) => {
-    //   console.log(response);
-    // });
-
+    this.carts.removeBookFromCart(payload).subscribe((response: any) => {
+      console.log(response);
+    });
   }
 }
