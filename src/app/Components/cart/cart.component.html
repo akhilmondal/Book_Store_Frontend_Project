@@ -1,0 +1,203 @@
+<div class="container">
+  <div>
+    <mat-card>
+      <div class="item-margin">
+        <h1>My Cart ( {{ itemNumber }} )</h1>
+      </div>
+      <div *ngFor="let book of books">
+        <div class="book-details">
+          <div class="item-margin">
+            <img class="book-img" src="/assets/book_cover.jpg" alt="" />
+          </div>
+          <div class="item-margin">
+            <div>
+              <h1>{{ book.bookName }}</h1>
+              <p style="color: #999">by {{ book.author }}</p>
+            </div>
+            <div class="book-price">
+              <h4>
+                <h2>
+                  <b>Rs. {{ book.price }}</b>
+                </h2>
+              </h4>
+              <h4 style="text-decoration: line-through; color: #999">
+                Rs. 1000
+              </h4>
+            </div>
+            <div class="cart-operation">
+              <div>
+                <img
+                  class="cart-operation-img"
+                  src="/assets/remove_from_cart.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <input
+                  class="cart-operation-input"
+                  type="text"
+                  value="{{ book.quantity }}"
+                />
+              </div>
+              <div>
+                <img
+                  class="cart-operation-img"
+                  src="/assets/add_to_cart.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <button mat-button>Remove</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="order-button" *ngIf="panelOpenState === false">
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="panelOpenState = true"
+        >
+          PLACE ORDER
+        </button>
+      </div>
+    </mat-card>
+  </div>
+  <div class="address-details">
+    <mat-card>
+      <div *ngIf="panelOpenState === false">
+        <h2>Address Details</h2>
+      </div>
+      <div *ngIf="panelOpenState === true">
+        <div>
+          <h2>Customer Details</h2>
+        </div>
+        <div class="div-row">
+          <div>
+            <p>Full Name</p>
+            <p>
+              <mat-form-field class="input" appearance="outline">
+                <input matInput placeholder="Akhil Mondal" />
+                <mat-error>Full Name required</mat-error>
+              </mat-form-field>
+            </p>
+          </div>
+          <div>
+            <p>Phone Number</p>
+            <p>
+              <mat-form-field class="input" appearance="outline">
+                <input matInput placeholder="9347473828" />
+                <mat-error>Phone Number required</mat-error>
+              </mat-form-field>
+            </p>
+          </div>
+        </div>
+        <div class="radio-button">
+          <div>
+            <mat-radio-button value="1">
+              <h1>1. Work</h1>
+            </mat-radio-button>
+            <div>
+              <div>
+                <p>Address</p>
+                <mat-form-field class="example-full-width">
+                  <mat-label
+                    >BridgeLabz Solutions LLP, No. 42, 14th Main, <br />15th
+                    Cross, Sector 4, Opp to BDA complex, <br />near Kumarakom
+                    restaurant, HSR Layout, Bangalore</mat-label
+                  >
+                  <textarea matInput placeholder="Ex. "></textarea>
+                </mat-form-field>
+              </div>
+              <div class="div-row-right">
+                <div>
+                  <p>City/Town</p>
+                  <p>
+                    <mat-form-field class="input" appearance="outline">
+                      <input matInput placeholder="Malkangiri" />
+                      <mat-error>City required</mat-error>
+                    </mat-form-field>
+                  </p>
+                </div>
+                <div>
+                  <p>State</p>
+                  <p>
+                    <mat-form-field class="input" appearance="outline">
+                      <input matInput placeholder="Odisha" />
+                      <mat-error>State required</mat-error>
+                    </mat-form-field>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <mat-radio-button value="2">
+              <h1>2. Home</h1>
+            </mat-radio-button>
+            <div>
+              <p>Address</p>
+              <p>
+                BridgeLabz Solutions LLP, No. 42, 14th Main, <br />15th Cross,
+                Sector 4, Opp to BDA complex, <br />near Kumarakom restaurant,
+                HSR Layout, Bangalore
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="order-button" *ngIf="panelOpenState2 === false">
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="panelOpenState2 = true"
+          >
+            CONTINUE
+          </button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  <div class="order-summary">
+    <mat-card>
+      <div *ngIf="panelOpenState2 === false">
+        <h2>Order Summary</h2>
+      </div>
+      <div *ngIf="panelOpenState === true && panelOpenState2 === true">
+        <h2>Order Summary</h2>
+        <div *ngFor="let book of books">
+          <div class="book-details">
+            <div class="item-margin">
+              <img class="book-img" src="/assets/book_cover.jpg" alt="" />
+            </div>
+            <div class="item-margin">
+              <div>
+                <h1>{{ book.bookName }}</h1>
+                <p style="color: #999">by {{ book.author }}</p>
+              </div>
+              <div class="book-price">
+                <h4>
+                  <h2>
+                    <b>Rs. {{ book.price }}</b>
+                  </h2>
+                </h4>
+                <h4 style="text-decoration: line-through; color: #999">
+                  Rs. 1000
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="order-button" *ngIf="panelOpenState2 === true">
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="panelOpenState2 = true"
+        >
+          CHECKOUT
+        </button>
+      </div>
+    </mat-card>
+  </div>
+</div>
