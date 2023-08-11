@@ -6,14 +6,19 @@ import { GetallbooksComponent } from './Components/getallbooks/getallbooks.compo
 import { BookdetailsComponent } from './Components/bookdetails/bookdetails.component';
 import { CartComponent } from './Components/cart/cart.component';
 import { OrderplacedComponent } from './Components/orderplaced/orderplaced.component';
+import { authguardGuard } from './Components/auth/authguard.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {
     path: 'dashboard',
     component: DashboardComponent,
+    canActivate: [authguardGuard],
     children: [
-      { path: 'getallbooks', component: GetallbooksComponent },
+      {
+        path: 'getallbooks',
+        component: GetallbooksComponent,
+      },
       { path: 'getallbooks/:id', component: BookdetailsComponent },
       { path: 'cart', component: CartComponent },
       { path: 'orderplaced', component: OrderplacedComponent },
