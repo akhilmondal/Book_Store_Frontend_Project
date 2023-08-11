@@ -31,6 +31,7 @@ import { BookdetailsComponent } from './Components/bookdetails/bookdetails.compo
 import { CartComponent } from './Components/cart/cart.component';
 import { OrderplacedComponent } from './Components/orderplaced/orderplaced.component';
 import { SearchBookPipe } from './Pipe/filterBooks/search-book.pipe';
+import { AuthguardService } from './Services/auth/authguard.service';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,7 @@ import { SearchBookPipe } from './Pipe/filterBooks/search-book.pipe';
     MatExpansionModule,
     MatRadioModule,
   ],
-  providers: [],
+  providers: [AuthguardService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
